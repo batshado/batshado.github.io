@@ -2,35 +2,38 @@
 layout: post
 title:  "Git - Les commandes essentielles"
 date:   2021-04-21 15:48:00 +0200
+author: batshado
 categories: [dev, git]
 ---
-__pour voir les changement__
-
+#### Voir les changements
 `git status`
 
-### pour ajouter les nouveaux fichiers ou les fichiers modifiers
-git add xxx
 
-# commit dans la branche en cours
-git commit -m "commentaires"
+#### Valider l'ajout de nouveaux fichiers ou la modification de fichiers existants
+`git add xxx`
 
-# passer sur la branche master
-git checkout master
 
-# fusion de la branche de dev dans le master
-git merge branche_dev
+#### Effectuer un _commit_ dans la branche en cours avec ajout d'un commentaire
+`git commit -m "commentaires"`
 
-# pousser le master dans le depot distant
-git push origin master
 
-# dans ce cas on pousse et on créé une nouvelle branche sur le dépot distant
-git push -u repository_distant ma_branche_de_developpement
+#### Changer de branche (par exemple passer sur la branche _master_)
+`git checkout master`
 
-# créer une nouvelle branche à partir du master
-git checkout -b nouvelle_branche
+#### Fusion d'une branche avec la branche courante
+`git merge branche_dev`
 
-# pour vérifier que l'on est bien dans la branche souhaitée
-git branch
+#### Mettre à jour le dépot distant (dans cet exemple c'est la branche master distante)
+`git push repository_distant master`
 
-# export
-git archive --format zip --output=$HOME/export-mon-depot-git.zip master
+#### Mettre à jour le dépot distant et créer une nouvelle branche distante
+`git push -u repository_distant ma_nouvelle_branche_distante`
+
+#### Créer une nouvelle branche à partir de la branche courante
+`git checkout -b nouvelle_branche`
+
+#### Pour dans quelle branche nous sommes (et aussi voir la liste des branches locales)
+`git branch`
+
+#### Créer un export
+`git archive --format zip --output=$HOME/export-mon-depot-git.zip master`
