@@ -20,6 +20,12 @@ layout: default
           <a class="post-link" href="{{ post.url | relative_url }}">
             {{ post.title | escape }}
           </a>
+		  
+	  {% for category in post.categories %}
+	  <a href="{{site.baseurl}}/categories/#{{category|slugize}}" style="font-size:0.8em;">[{{category}}]</a>
+	  {% unless forloop.last %}&nbsp;{% endunless %}
+	  {% endfor %}	  		  
+		  
         </h3>
         {%- if site.show_excerpts -%}
           {{ post.excerpt }}

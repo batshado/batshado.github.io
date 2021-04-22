@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Git - Les commandes essentielles"
+title:  "Les commandes essentielles"
 date:   2021-04-21 15:48:00 +0200
 author: batshado
 categories: [dev, git]
